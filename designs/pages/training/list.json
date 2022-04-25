@@ -1,0 +1,225 @@
+[
+    {
+        "id": "sd_DTNxFAxoc7gXqaFC",
+        "type": "tab",
+        "createdDate": "2022-04-25T09:49:22.572Z",
+        "label": "list",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "listComponent"
+    },
+    {
+        "id": "sd_wRKHN6156igZuwDN",
+        "type": "OnInit",
+        "z": "sd_DTNxFAxoc7gXqaFC",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_wRKHN6156igZuwDN",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_64kr9FpFLORU3MPE"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "listComponent"
+    },
+    {
+        "id": "sd_64kr9FpFLORU3MPE",
+        "type": "PageVariables",
+        "z": "sd_DTNxFAxoc7gXqaFC",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [
+            {
+                "textIp": "blogs",
+                "typedIpValue": {
+                    "type": "bh",
+                    "value": ""
+                }
+            }
+        ],
+        "functionName": "sd_64kr9FpFLORU3MPE",
+        "category": "Function",
+        "x": 185,
+        "y": 40,
+        "wires": [
+            [
+                "sd_MqGeMdQHDB4A7cdX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_MqGeMdQHDB4A7cdX",
+        "type": "Script",
+        "z": "sd_DTNxFAxoc7gXqaFC",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "page.blogs = [{\n    \"id\":1,\n    \"title\":\"AAA\",\n    \"description\":\"HEllo\",\n    \"image\":\"https://via.placeholder.com/150\"\n},{\n        \"id\":2,\n    \"title\":\"BBB\",\n     \"description\":\"HEllo\",\n      \"image\":\"https://via.placeholder.com/150\"\n},{\n        \"id\":3,\n    \"title\":\"CCC\",\n     \"description\":\"HEllo\",\n      \"image\":\"https://via.placeholder.com/150\"\n}]",
+        "functionName": "sd_MqGeMdQHDB4A7cdX",
+        "category": "Function",
+        "x": 300,
+        "y": 40,
+        "wires": [
+            [
+                "sd_ReLgIXbfp1adrbSs"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_ReLgIXbfp1adrbSs",
+        "type": "Log",
+        "z": "sd_DTNxFAxoc7gXqaFC",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "",
+        "outputs": 0,
+        "logObject": "this.page.blogs",
+        "functionName": "sd_ReLgIXbfp1adrbSs",
+        "category": "General",
+        "x": 420,
+        "y": 60,
+        "wires": [],
+        "__ssdTypeInputs__": {
+            "logObject": {
+                "type": "this.page",
+                "value": "blogs",
+                "constant": false
+            }
+        },
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_nVCnzfXDMiH3hHNv",
+        "type": "PageStart",
+        "z": "sd_DTNxFAxoc7gXqaFC",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "navigateToDetailsPages",
+        "outputs": 1,
+        "inputVariables": [
+            {
+                "key": "event",
+                "defaultValue": {
+                    "type": "any",
+                    "value": ""
+                },
+                "output": false
+            }
+        ],
+        "localVariables": [],
+        "flow_type": "sync",
+        "functionName": "navigateToDetailsPages",
+        "category": "General",
+        "x": 140,
+        "y": 240,
+        "wires": [
+            [
+                "sd_c6lWvjdCH08ENltK"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "listComponent"
+    },
+    {
+        "id": "sd_Aj86AnVyoRZkerhO",
+        "type": "Navigation",
+        "z": "sd_DTNxFAxoc7gXqaFC",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "navigateTodetailPage",
+        "path": "/home/detail/:id",
+        "pathparams": [
+            {
+                "paramKey": "id",
+                "paramValue": {
+                    "type": "bh.input",
+                    "value": "event.id"
+                }
+            }
+        ],
+        "functionName": "navigateTodetailPage",
+        "category": "Navigation",
+        "x": 605,
+        "y": 240,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_c6lWvjdCH08ENltK",
+        "type": "Script",
+        "z": "sd_DTNxFAxoc7gXqaFC",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "script": "console.log(bh.input)",
+        "functionName": "sd_c6lWvjdCH08ENltK",
+        "category": "Function",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "sd_8iKMzQG0YgEHGjxX"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_8iKMzQG0YgEHGjxX",
+        "type": "Storage",
+        "z": "sd_DTNxFAxoc7gXqaFC",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "sessionStorage",
+        "operationType": "setItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedBlog"
+        },
+        "value": {
+            "type": "bh.input",
+            "value": "event"
+        },
+        "resultMapping": {},
+        "functionName": "sessionStorage",
+        "category": "Storage",
+        "x": 405,
+        "y": 240,
+        "wires": [
+            [
+                "sd_Aj86AnVyoRZkerhO"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]

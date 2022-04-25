@@ -1,0 +1,87 @@
+[
+    {
+        "id": "sd_Bjee5ORcSD6oZBrm",
+        "type": "tab",
+        "createdDate": "2022-04-25T11:18:08.361Z",
+        "label": "detail",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "detailComponent"
+    },
+    {
+        "id": "sd_WxWkKoSmhfrBlZHx",
+        "type": "OnInit",
+        "z": "sd_Bjee5ORcSD6oZBrm",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_WxWkKoSmhfrBlZHx",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_KbLBPviS7OEAVmde"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "detailComponent"
+    },
+    {
+        "id": "sd_KbLBPviS7OEAVmde",
+        "type": "PageVariables",
+        "z": "sd_Bjee5ORcSD6oZBrm",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_KbLBPviS7OEAVmde",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            [
+                "sd_sUSuH5RZgibLE071"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    },
+    {
+        "id": "sd_sUSuH5RZgibLE071",
+        "type": "Storage",
+        "z": "sd_Bjee5ORcSD6oZBrm",
+        "viewType": "client-pages",
+        "nodeType": "flow",
+        "name": "getSelectedValue",
+        "operationType": "getItem",
+        "storageType": "sessionStorage",
+        "outputs": 1,
+        "key": {
+            "type": "str",
+            "value": "selectedBlog"
+        },
+        "value": {},
+        "resultMapping": {
+            "type": "this.page",
+            "value": "blog"
+        },
+        "functionName": "getSelectedValue",
+        "category": "Storage",
+        "x": 320,
+        "y": 40,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "generated": true
+    }
+]
